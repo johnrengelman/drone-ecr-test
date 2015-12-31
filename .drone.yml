@@ -4,7 +4,7 @@ build:
     - echo "hi"
 publish:
   docker:
-    image: objectpartners/drone-ecr:0.1.0
+    image: objectpartners/drone-ecr:latest
     when:
       branch: master
     access_key: $$AWS_ACCESS_KEY
