@@ -1,0 +1,14 @@
+build:
+  image: library/java:8
+  commands:
+    - echo "hi"
+publish:
+  docker:
+    image: objectpartners/drone-ecr:0.1.0
+    when:
+      branch: master
+    access_key: $$AWS_ACCESS_KEY
+    secret_key: $$AWS_SECRET_KEY
+    region: us-east-1
+    repo: test
+    tag: latest
